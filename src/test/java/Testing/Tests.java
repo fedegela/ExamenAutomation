@@ -1,11 +1,12 @@
-package pageObject;
+package Testing;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pageObject.MainPage;
 
-public class Testeo 
+public class Tests 
 {
 	private WebDriver driver;
 	
@@ -20,7 +21,7 @@ public class Testeo
 	public void BuscarZapatillas()
 	{
 		MainPage mainPage = new MainPage(driver);
-        driver.navigate().to(mainPage.getWebUrl);
+        driver.navigate().to(mainPage.getWebUrl());
 		mainPage.selectCategory();
 	}
 	
