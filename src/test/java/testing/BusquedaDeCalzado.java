@@ -33,8 +33,8 @@ public class BusquedaDeCalzado
 	@AfterMethod
 	public void after()
 	{
-		driver.close();
-		driver.quit();
+		//driver.close();
+		//driver.quit();
 	}
 	
 	
