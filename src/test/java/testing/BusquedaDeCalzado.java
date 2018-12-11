@@ -1,4 +1,4 @@
-package Testing;
+package testing;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObject.MainPage;
 
-public class Tests 
+public class BusquedaDeCalzado 
 {
 	private WebDriver driver;
 	
@@ -16,13 +16,9 @@ public class Tests
 	{
 		String os = System.getProperty("os.name").toLowerCase();
 		if (os.contains("mac")) 
-		{
 			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
-		}
 		else
-		{
 			System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-		}
 		driver = new ChromeDriver();	
 	}
 	
@@ -37,8 +33,8 @@ public class Tests
 	@AfterMethod
 	public void after()
 	{
-	//	driver.close();
-	//	driver.quit();
+		driver.close();
+		driver.quit();
 	}
 	
 	

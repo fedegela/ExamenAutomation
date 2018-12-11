@@ -3,6 +3,7 @@ package pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class MainPage 
@@ -14,12 +15,11 @@ public class MainPage
 	private By buttonCalzado = By.partialLinkText("Calzado");
 	
 	//private By buttonCalzadoParaHombre = By.partialLinkText("Calzado para hombres");
-	private By buttonCalzadoParaHombre = By.partialLinkText("Calzado");
-	//private By dropdownOrden = By.id("w5-w0-w1_btn"); NO
-	//private By buttonPrecioMasBajo = By.xpath("*//span[contains(text(),'Precio m√°s bajo + Env√≠o')]");NO?
+	private By dropdownOrden = By.id("w7-w0-w1_btn");
+	private By buttonPrecioMasBajo = By.xpath("*//span[contains(text(),'Precio m·s bajo')]");
 	
 	//private By buttonSearch = By.id("gh-btn"); No lo estoy usando por el momento
-	private By buttonEnvioGratis = By.partialLinkText("Env√≠o internacional");
+	private By buttonEnvioGratis = By.partialLinkText("EnvÌo internacional");
 	private By buttonTalle10 = By.xpath("*//span[text()='10']");
 	private By buttonPuma = By.xpath("*//span[contains(text(),'PUMA')]");
 	
@@ -32,17 +32,28 @@ public class MainPage
 	{
 		driver.findElement(buttonCategory).click();	
 		driver.findElement(buttonCalzado).click();
-		driver.findElement(buttonCalzadoParaHombre).click();
+		getCalzadoParaHombre().click();
 		driver.findElement(buttonTalle10).click();
 		driver.findElement(buttonEnvioGratis).click();
 		driver.findElement(buttonPuma).click();
-	//	driver.findElement(dropdownOrden).getAttribute(name)
-	//	driver.findElement(buttonPrecioMasBajo).click();
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(dropdownOrden)).build().perform();
+		driver.findElement(buttonPrecioMasBajo).click();
 	}
 
     public String getWebUrl()
     {
         return webUrl;
+    }
+    
+    private WebElement getCalzadoParaHombre()
+    {
+    	By botonEspanol = By.partialLinkText("Calzado");
+    	By buttonEnglish = By.partialLinkText("Mens");
+    	if (driver.findElement(botonEspanol).isEnabled())
+    		return driver.findElement(botonEspanol);
+    	else 
+    		return driver.findElement(buttonEnglish);
     }
 
 
