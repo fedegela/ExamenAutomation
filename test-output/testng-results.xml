@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42513" started-at="2018-12-12T00:12:10Z" finished-at="2018-12-12T00:12:53Z">
+  <suite name="Default suite" duration-ms="20383" started-at="2018-12-12T08:18:22Z" finished-at="2018-12-12T08:18:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42513" started-at="2018-12-12T00:12:10Z" finished-at="2018-12-12T00:12:53Z">
+    <test name="Default test" duration-ms="20383" started-at="2018-12-12T08:18:22Z" finished-at="2018-12-12T08:18:42Z">
       <class name="testing.BusquedaDeCalzado">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testing.BusquedaDeCalzado@e25b2fe]" name="setUp" is-config="true" duration-ms="1776" started-at="2018-12-12T00:12:10Z" finished-at="2018-12-12T00:12:12Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testing.BusquedaDeCalzado@224edc67]" name="setUp" is-config="true" duration-ms="2761" started-at="2018-12-12T08:18:22Z" finished-at="2018-12-12T08:18:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="buscarZapatillas()[pri:0, instance:testing.BusquedaDeCalzado@e25b2fe]" name="buscarZapatillas" duration-ms="40715" started-at="2018-12-12T00:12:12Z" finished-at="2018-12-12T00:12:53Z">
+        <test-method status="PASS" signature="buscarZapatillas()[pri:0, instance:testing.BusquedaDeCalzado@224edc67]" name="buscarZapatillas" duration-ms="17609" started-at="2018-12-12T08:18:25Z" finished-at="2018-12-12T08:18:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buscarZapatillas -->
-        <test-method status="PASS" signature="after()[pri:0, instance:testing.BusquedaDeCalzado@e25b2fe]" name="after" is-config="true" duration-ms="1" started-at="2018-12-12T00:12:53Z" finished-at="2018-12-12T00:12:53Z">
+        <test-method status="PASS" signature="after()[pri:0, instance:testing.BusquedaDeCalzado@224edc67]" name="after" is-config="true" duration-ms="0" started-at="2018-12-12T08:18:42Z" finished-at="2018-12-12T08:18:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
