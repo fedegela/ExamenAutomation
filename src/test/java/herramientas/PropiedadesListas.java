@@ -8,7 +8,6 @@ public class PropiedadesListas
 {
 	public void impirimirProductos(List<StructProducto> lista)
 	{
-		System.out.println("tamano de lista: " +  lista.size());
 		for(int i=0; i<lista.size(); i++)
 		{
 			System.out.println("Producto numero: " + (i+1));

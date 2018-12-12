@@ -45,14 +45,16 @@ public class BusquedaDeCalzado
 		List<StructProducto> lista = paginaCalzado.generarListaDeProductos(cantidadProductos);
 		PropiedadesListas propiedadesListas = new PropiedadesListas();
 		Assert.assertTrue(propiedadesListas.esPrecioAscendente(lista));
-		//System.out.println("Paso por el assert");
+		System.out.println("");
+		System.out.println("Productos ordenados por precio ascendente");
 		propiedadesListas.impirimirProductos(lista);
-		//System.out.println("Imprimio Lista");
 		lista = propiedadesListas.ordenarProductosPorNombreAscendente(lista);
+		System.out.println("");
+		System.out.println("Productos ordenados por nombre ascendente");
 		propiedadesListas.impirimirProductos(lista);
-		//System.out.println("Imprimio Lista por nombre");
+		System.out.println("");
+		System.out.println("Productos ordenados por precio descendente");
 		propiedadesListas.impirimirProductos(propiedadesListas.ordenarProductosPorPrecioDescendente(lista));
-		//System.out.println("Imprimio Lista por precio invertido");
 	}
 	
 	@AfterMethod

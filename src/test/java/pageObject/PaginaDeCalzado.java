@@ -10,7 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import herramientas.StructProducto;
 
-public class PaginaDeCalzado {
+public class PaginaDeCalzado 
+{
 	
 	private WebDriver driver;
 	private By botonPrecioMasBajo = By.xpath("*//span[contains(text(),'bajo')]");
@@ -58,12 +59,12 @@ public class PaginaDeCalzado {
 		return;
 	}
 	
-    public List<StructProducto> generarListaDeProductos(int tamañoLista)
+    public List<StructProducto> generarListaDeProductos(int tamanoLista)
     {
     	List<WebElement> precios = driver.findElements(By.className("s-item__price"));
 		List<WebElement> titulos = driver.findElements(By.className("s-item__title"));
 		List<StructProducto> productos = new ArrayList<StructProducto>();
-		for(int i=0; i < tamañoLista; i++)
+		for(int i=0; i < tamanoLista; i++)
 		{
 			StructProducto productoNuevo = new StructProducto(); 
 			productoNuevo.setPrecio(precios.get(i).getText());
